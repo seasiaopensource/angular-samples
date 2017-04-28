@@ -1,0 +1,33 @@
+zm-create-creator {
+  h1, h2, h3, h4, h5, h6, p {
+    margin: initial;
+  }
+
+  [ng-drag] {
+    width: 100%;
+    height: 100%;
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .7;
+    }
+  }
+
+  [ng-drop] {
+    cursor: default;
+
+    .drag-enter {
+      border: solid 1px red;
+      cursor: move;
+    }
+  }
+
+  .dragging {
+    //transform: scale(1.5);
+    //border: solid 2px red;
+  }
+}

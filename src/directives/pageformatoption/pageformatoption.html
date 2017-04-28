@@ -1,0 +1,4 @@
+<span>{{ ::vm.format.name }}</span>
+<small ng-if="::vm.isFixedFormat(vm.format)" class="md-caption" notranslate>({{ ::vm.format.width }}{{
+  ::vm.getUnitLabel(vm.format.unit) }} x {{ ::vm.format.height }}{{ ::vm.getUnitLabel(vm.format.unit) }})
+</small>

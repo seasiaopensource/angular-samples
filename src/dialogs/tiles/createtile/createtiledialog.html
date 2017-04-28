@@ -1,0 +1,49 @@
+<md-dialog flex="50" aria-label="Create Tile Dialog">
+  <zm-dialog-header title="Create Tile" dialog="vm.$mdDialog"></zm-dialog-header>
+  <form name="vm.form" ng-submit="vm.submit(vm.tile)" novalidate>
+    <md-dialog-content>
+      <div layout="column">
+        <md-input-container flex class="md-block" ng-if="false">
+          <label for="name">
+            Name
+          </label>
+          <input id="name" name="name" type="text" ng-model="vm.tile.name" required>
+          <ng-messages for="vm.form.name.$error" role="alert">
+            <ng-message when="required">
+              Please choose a valid name!
+            </ng-message>
+          </ng-messages>
+        </md-input-container>
+        <div layout="row" flex>
+          <md-input-container flex class="md-block">
+            <label for="width">
+              Width (px)
+            </label>
+            <input id="width" name="height" type="number" ng-model="vm.tile.width" min="{{ vm.min }}" max="{{ vm.max }}" step="{{ vm.step }}" required>
+            <ng-messages for="vm.form.width.$error" role="alert">
+              <ng-message when="required">
+                Please choose a valid width!
+              </ng-message>
+            </ng-messages>
+          </md-input-container>
+          <md-input-container flex class="md-block">
+            <label for="height">
+              Height (px)
+            </label>
+            <input id="height" name="height" type="number" ng-model="vm.tile.height" min="{{ vm.min }}" max="{{ vm.max }}" step="{{ vm.step }}" required>
+            <ng-messages for="vm.form.height.$error" role="alert">
+              <ng-message when="required">
+                Please choose a valid height!
+              </ng-message>
+            </ng-messages>
+          </md-input-container>
+        </div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions>
+      <md-button type="submit" class="md-primary md-raised" ng-disabled="vm.form.$invalid">
+        OK
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

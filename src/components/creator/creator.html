@@ -1,0 +1,28 @@
+<div flex>
+  <!-- stage -->
+  <zm-comp-stage-container-neu
+    rows="1"
+    columns="1"
+    project="vm.project"
+    page="vm.page"
+    zoom="vm.zoom">
+
+  </zm-comp-stage-container-neu>
+</div>
+
+<div flex="nogrow">
+  <!-- bottombar -->
+  <zm-create-bottombar name="{{ vm.project.name }}" pages="vm.pages" page="vm.page" dimensions="vm.dimensions"
+                       zoom="vm.zoom" history="vm.history">
+
+  </zm-create-bottombar>
+</div>
+
+<!-- assetbar -->
+<zm-create-assetbar></zm-create-assetbar>
+
+<!-- projectbar -->
+<zm-create-projectbar project="vm.project"></zm-create-projectbar>
+
+
+
